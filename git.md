@@ -1,49 +1,49 @@
 ### 01 Git Configuration
 
-| Command                                                 | Description                                                           |
-| ------------------------------------------------------- | --------------------------------------------------------------------- |
-| [`git config --global user.name "Your Name"`](#)        | Set the name that will be attached to your commits and tags.          |
-| [`git config --global user.email "you@example.com"`](#) | Set the email address that will be attached to your commits and tags. |
-| [`git config --global color.ui auto`](#)                | Enable some colorization of Git output.                               |
+| Command                                            | Description                                                           |
+| -------------------------------------------------- | --------------------------------------------------------------------- |
+| `git config --global user.name "Your Name"`        | Set the name that will be attached to your commits and tags.          |
+| `git config --global user.email "you@example.com"` | Set the email address that will be attached to your commits and tags. |
+| `git config --global color.ui auto`                | Enable some colorization of Git output.                               |
 
 ### 02 Starting a Project
 
-| Command                        | Description                                                                                                                                                                                 |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`git init [project name]`](#) | Create a new local repository in the current directory. If `[project name]` is provided, Git will create a new directory named `[project name]` and will initialize a repository inside it. |
-| [`git clone <project url>`](#) | Downloads a project with the entire history from the remote repository to the code.                                                                                                         |
+| Command                   | Description                                                                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `git init [project name]` | Create a new local repository in the current directory. If `[project name]` is provided, Git will create a new directory named `[project name]` and will initialize a repository inside it. |
+| `git clone <project url>` | Downloads a project with the entire history from the remote repository to the code.                                                                                                         |
 
 ### 03 Day-to-Day Work
 
-| Command                         | Description                                                                                                                                                                          |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`git status`](#)               | Displays the status of your working directory. Options include new, staged, and modified files. It will retrieve branch name, current commit identifier, and changes pending commit. |
-| [`git add [file]`](#)           | Add a file to the staging area. Use `.` in place of the full file path to add all changed files from the current directory down into the directory tree.                             |
-| [`git diff [file]`](#)          | Show changes between working directory and staging area.                                                                                                                             |
-| [`git diff --staged [file]`](#) | Shows any changes between the staging area and the repository.                                                                                                                       |
-| [`git checkout -- [file]`](#)   | Discard changes in the working directory. This operation is unrecoverable.                                                                                                           |
-| [`git reset -- [file]`](#)      | Revert some paths in the index (or the whole index) to their state in HEAD.                                                                                                          |
-| [`git commit`](#)               | Create a new commit from changes added to the staging area. The commit must have a message!                                                                                          |
-| [`git rm [file]`](#)            | Remove file from working directory and staging area.                                                                                                                                 |
+| Command                    | Description                                                                                                                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `git status`               | Displays the status of your working directory. Options include new, staged, and modified files. It will retrieve branch name, current commit identifier, and changes pending commit. |
+| `git add [file]`           | Add a file to the staging area. Use `.` in place of the full file path to add all changed files from the current directory down into the directory tree.                             |
+| `git diff [file]`          | Show changes between working directory and staging area.                                                                                                                             |
+| `git diff --staged [file]` | Shows any changes between the staging area and the repository.                                                                                                                       |
+| `git checkout -- [file]`   | Discard changes in the working directory. This operation is unrecoverable.                                                                                                           |
+| `git reset -- [file]`      | Revert some paths in the index (or the whole index) to their state in HEAD.                                                                                                          |
+| `git commit`               | Create a new commit from changes added to the staging area. The commit must have a message!                                                                                          |
 
 ### 04 Storing Your Work
 
-| Command               | Description                                                             |
-| --------------------- | ----------------------------------------------------------------------- |
-| [`git stash`](#)      | Put current changes in your working directory into stash for later use. |
-| [`git stash pop`](#)  | Apply stored stash content into working directory, and clear stash.     |
-| [`git stash drop`](#) | Delete a specific stash from all your previous stashes.                 |
+|
+| Command | Description |
+|----------------------------------------------|--------------------------------------------------------------------------------|
+| `git stash` | Put current changes in your working directory into stash for later use. |
+| `git stash pop` | Apply stored stash content into working directory, and clear stash. |
+| `git stash drop` | Delete a specific stash from all your previous stashes. |
 
 ### 05 Git Branching Model
 
-| Command                                | Description                                                                                                                          |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [`git branch [-a]`](#)                 | List all local branches in repository. With `-a`: show all branches (with remote).                                                   |
-| [`git branch [branch_name]`](#)        | Create a new branch, referencing the current HEAD.                                                                                   |
-| [`git rebase [branch_name]`](#)        | Apply commits of the current working branch and apply them to the HEAD of `[branch]` to make the history of your branch more linear. |
-| [`git checkout [-b] [branch_name]`](#) | Switch working directory to the specified branch. With `-b`: Git will create the specified branch if it does not exist.              |
-| [`git merge [branch_name]`](#)         | Join specified `[branch_name]` branch into your current branch (the one you are on currently).                                       |
-| [`git branch -d [branch_name]`](#)     | Remove selected branch, if it is already merged into any other. `-D` instead of `-d` forces deletion.                                |
+| Command                           | Description                                                                                                                          |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `git branch [-a]`                 | List all local branches in repository. With `-a`: show all branches (with remote).                                                   |
+| `git branch [branch_name]`        | Create a new branch, referencing the current HEAD.                                                                                   |
+| `git rebase [branch_name]`        | Apply commits of the current working branch and apply them to the HEAD of `[branch]` to make the history of your branch more linear. |
+| `git checkout [-b] [branch_name]` | Switch working directory to the specified branch. With `-b`: Git will create the specified branch if it does not exist.              |
+| `git merge [branch_name]`         | Join specified `[branch_name]` branch into your current branch (the one you are on currently).                                       |
+| `git branch -d [branch_name]`     | Remove selected branch, if it is already merged into any other. `-D` instead of `-d` forces deletion.                                |
 
 ### 06 Inspect History
 
@@ -100,6 +100,4 @@ cat <<EOF > .gitignore
 /tmp
 *.swp
 EOF
-
-
 ```
