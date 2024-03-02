@@ -706,7 +706,7 @@ fi
 
 #### Grep check
 
-````if grep -q 'foo' ~/.bash_history; then
+```if grep -q 'foo' ~/.bash_history; then
   echo "You appear to have typed 'foo' in the past"
-fi```
-````
+fi
+```
